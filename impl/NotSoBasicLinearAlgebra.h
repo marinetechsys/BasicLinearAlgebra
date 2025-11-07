@@ -96,7 +96,7 @@ LUDecomposition<ParentType> LUDecompose(MatrixBase<ParentType, Dim, Dim, typenam
         for (int j = 0; j < Dim; ++j)
         {
             typename ParentType::DType this_elem = fabs(A(i, j));
-            largest_elem = max(this_elem, largest_elem);
+            largest_elem = std::max(this_elem, largest_elem);
         }
 
         // No nonzero largest element.
